@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    touch-action: none;
+}
+
+#status {
+    margin: 20px 0;
+    padding: 10px;
+    background: #333;
+    border-radius: 8px;
+    font-family: monospace;
+}
+
+button#connectBtn {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.dpad {
+    display: grid;
+    grid-template-columns: 80px 80px 80px;
+    grid-template-rows: 80px 80px 80px;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.dpad-btn {
+    background-color: #555;
+    border: 2px solid #777;
+    border-radius: 10px;
+    font-size: 24px;
+    color: white;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dpad-btn:active,
+.dpad-btn.active {
+    background-color: #28a745;
+    border-color: #1e7e34;
+}
+
+#btn-f {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#btn-l {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+#btn-r {
+    grid-column: 3;
+    grid-row: 2;
+}
+
+#btn-b {
+    grid-column: 2;
+    grid-row: 3;
+}
