@@ -6,20 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>micro:bit Web Controller</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="script.js" defer></script>
 </head>
 
 <body>
-    <h2>Simple micro:bit Web Controller</h2>
-    <button id="connectBtn">Connect</button>
-    <div id="status">Status: Disconnected</div>
-
-    <div class="dpad">
-        <div id="btn-f" class="dpad-btn" data-id="f">⬆️</div>
-        <div id="btn-l" class="dpad-btn" data-id="l">⬅️</div>
-        <div id="btn-r" class="dpad-btn" data-id="r">➡️</div>
-        <div id="btn-b" class="dpad-btn" data-id="b">⬇️</div>
+    <h2>Simple micro:bit Controller</h2>
+    <div class="control-buttons">
+        <button id="connectBtn">Connect</button>
+        <button id="toggleConsoleBtn">
+            <i class="fa-solid fa-terminal"></i>
+        </button>
     </div>
+    <div id="status">Status: Initializing...</div>
+    
+    <div class="dpad">
+        <div id="btn-f" class="dpad-btn" data-id="f" data-release-id="s">
+            <i class="fa-solid fa-angle-up"></i>
+        </div>
+        <div id="btn-l" class="dpad-btn" data-id="l" data-release-id="s">
+            <i class="fa-solid fa-angle-left"></i>
+        </div>
+        <div id="btn-r" class="dpad-btn" data-id="r" data-release-id="s">
+            <i class="fa-solid fa-angle-right"></i>
+        </div>
+        <div id="btn-b" class="dpad-btn" data-id="b" data-release-id="s">
+            <i class="fa-solid fa-angle-down"></i>
+        </div>
+    </div>
+
+    <div class="action-buttons">
+        <div class="action-btn dpad-btn" data-id="D" data-release-id="s">
+            <i class="fa-solid fa-gear"></i>
+        </div>
+        <div class="action-btn dpad-btn" data-id="W" data-release-id="s">
+            <i class="fa-solid fa-bolt"></i>
+        </div>
+    </div>
+
+    <div id="console" class="hidden">Initializing...</div>
 </body>
 
 </html>

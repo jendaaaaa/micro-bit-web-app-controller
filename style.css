@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: monospace;
     background-color: #222;
     color: white;
     text-align: center;
@@ -9,22 +9,41 @@ body {
 }
 
 #status {
-    margin: 20px 0;
+    margin: 10px 0;
     padding: 10px;
     background: #333;
-    border-radius: 8px;
+    border-radius: 10px;
     font-family: monospace;
 }
 
-button#connectBtn {
+#console {
+    text-align: left;
+    margin: 100px 0;
+    padding: 10px;
+    background: #333;
+    border-radius: 10px;
+    font-family: monospace;
+    height: 160px;
+    overflow-y: auto;
+}
+
+button {
     padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007bff;
+    font-size: 14px;
+    font-family: monospace;
+    background-color: #434343;
     color: white;
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    margin-bottom: 30px;
+}
+
+button#connectBtn {
+    background-color: #007bff;
+}
+
+.control-buttons {
+    margin: 20px 0;
 }
 
 .dpad {
@@ -33,12 +52,11 @@ button#connectBtn {
     grid-template-rows: 80px 80px 80px;
     gap: 10px;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 60px;
 }
 
 .dpad-btn {
     background-color: #555;
-    border: 2px solid #777;
     border-radius: 10px;
     font-size: 24px;
     color: white;
@@ -51,7 +69,24 @@ button#connectBtn {
 .dpad-btn:active,
 .dpad-btn.active {
     background-color: #f5a017;
-    border-color: #a66b0b;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+.action-btn {
+    width: 80px;
+    height: 80px;
+    font-weight: bold;
+    background-color: #434343;
+}
+
+.hidden {
+    display: none !important;
 }
 
 #btn-f {
