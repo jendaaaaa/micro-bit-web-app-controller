@@ -1,12 +1,18 @@
 # Simple micro:bit Web App Controller
 Simple Web App for controlling micro:bit using BLE (Bluetooth Low Energy) compatible with Nordic UART.
 
+Commands are inspired by the *EV-micro:bit* app, since it cannot be downloaded on some Android devices.
+
 ## How to create code in MakeCode
 Simply read commands separated by `#`. Commands are simple:
 * `f` - forward
 * `b` - backward
 * `l` - left
 * `r` - right
+
+For other actions:
+* `D` - action button 1
+* `W` - action button 2
 
 ### Code example
 
@@ -42,6 +48,12 @@ basic.forever(function () {
         // right
     } else if (Data == "r") {
         // left
+    } else if (Data == "D") {
+        // action button 1
+    } else if (Data == "W") {
+        // action button 2
+    } else if (Data == "s") {
+        // release of any button
     } else {
         // released
     }
